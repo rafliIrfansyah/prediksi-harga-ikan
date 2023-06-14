@@ -6,10 +6,6 @@ df = pd.read_csv('https://storage.googleapis.com/myritime_bucket/CakalangTunaNew
 df1 = df.copy()
 scalers = {}
 
-def get_index_column(column):
-    index = df.columns.get_loc(column)
-    return index
-
 for i in df.columns:
     scaler = MinMaxScaler(feature_range=(0, 1))
     s_s = scaler.fit_transform(df1[i].values.reshape(-1, 1))
