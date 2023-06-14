@@ -10,6 +10,7 @@ def fishPricePrediction():
         prediction = model.predict(feature)
         prediction = inverse_transform(prediction)
         data = {
+            'status': 'success',
             'prediction': prediction[:,:,:].tolist()
         }
         return jsonify(data)
