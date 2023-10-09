@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 
-df = pd.read_csv('https://storage.googleapis.com/myritime_bucket/CakalangTunaNew.csv', sep=',', header=0, low_memory=False, index_col=['tanggal'])
+df = pd.read_csv('https://storage.cloud.google.com/myritime391_bucket/CakalangTunaNew.csv', sep=',', header=0, low_memory=False, index_col=['tanggal'])
 df1 = df.copy()
 scalers = {}
 
